@@ -86,7 +86,7 @@ public class RadioPlayerService extends Service implements PlayerCallback {
     /**
      * Radio State
      */
-    private State mRadioState;
+    private State mRadioState = State.IDLE;
 
     /**
      * Current radio URL
@@ -208,7 +208,6 @@ public class RadioPlayerService extends Service implements PlayerCallback {
 
         mListenerList = new ArrayList<RadioListener>();
 
-        mRadioState = State.IDLE;
         isSwitching = false;
         isInterrupted = false;
         mLock = false;
